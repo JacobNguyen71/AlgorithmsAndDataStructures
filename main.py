@@ -1,6 +1,7 @@
 from createRandomList import generate_list
 from bubblesort import bubble_sort
 from insertionsort import insertion_sort
+from mergesort import merge_sort
 import time
 
 def main():
@@ -15,4 +16,9 @@ def main():
     start_time = time.time()
     insertion_sort(random_list, len(random_list))
     print("insertion sort: --- %s seconds ---" % (time.time() - start_time))
+    start_time = time.time()
+    print(random_list)
+    merge_sort(random_list, len(random_list))
+    print("merge sort: --- %s seconds ---" % (time.time() - start_time))
+
 main()
